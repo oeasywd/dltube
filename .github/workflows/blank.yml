@@ -38,3 +38,10 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           wget https://down.sandai.net/thunder11/XunLeiWebSetup11.3.9.1902gw.exe
+          
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
