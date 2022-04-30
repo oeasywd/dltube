@@ -38,15 +38,22 @@ jobs:
       
       
       
+      
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
           wget https://down.sandai.net/thunder11/XunLeiWebSetup11.3.9.1902gw.exe
           ls -al
-          
-          
-          
+        
+      - name: commit
+        run: |
+          git config --global user.email 3196@qq.com
+          git config --global user.name ndt
+          git add .
+          git commit -m "update" -a
+
+               
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
