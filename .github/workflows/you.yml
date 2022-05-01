@@ -18,11 +18,24 @@ jobs:
         cd tmp
         you-get https://www.youtube.com/watch?v=Xk0Jc1rXf78
         cd ..
-    - name: Release
-      uses: softprops/action-gh-release@v1
+        
+    - name: commit
+      run: |
+          git config --global user.email 3196@qq.com
+          git config --global user.name ndt
+          git add .
+          git commit -m "update" -a
+               
+    - name: Push changes
+      uses: ad-m/github-push-action@master
       with:
-        files: ./tmp/*
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+    
+   # - name: Release
+    #  uses: softprops/action-gh-release@v1
+   #   with:
+    #    files: ./tmp/*
+   #   env:
+     #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
         
  
