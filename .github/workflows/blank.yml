@@ -36,7 +36,7 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           # wget https://down.sandai.net/thunder11/XunLeiWebSetup11.3.9.1902gw.exe
-          ping google.com
+          curl cip.cc
           ls -al
         
       - name: commit
