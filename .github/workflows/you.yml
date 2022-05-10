@@ -14,7 +14,7 @@ jobs:
         python-version: '3.6' # Version range or exact version of a Python version to use, using SemVer's version range syntax
         architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
     - run:  |
-      sudo apt install ffmpeg
+      sudo apt-get install ffmpeg
       ffmpeg -h
       pip install you-get
       # you-get https://www.youtube.com/watch?v=Xk0Jc1rXf78
