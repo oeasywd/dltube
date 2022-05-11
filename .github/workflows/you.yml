@@ -7,30 +7,30 @@ jobs:
  
     runs-on: ubuntu-latest
     steps:
-    # - uses: actions/checkout@v2
-    # - uses: actions/setup-python@v1
-    #   with:
-    #     python-version: '3.6' # Version range or exact version of a Python version to use, using SemVer's version range syntax
-    #     architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
-    # # - run:  |
-    # #     pip install you-get
-    # #     # mkdir tmp
-    # #     # cd tmp
-    # #     # you-get https://www.youtube.com/watch?v=Xk0Jc1rXf78
-    # #     # cd ..
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v1
+      with:
+        python-version: '3.6' # Version range or exact version of a Python version to use, using SemVer's version range syntax
+        architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
+    # - run:  |
+    #     pip install you-get
+    #     # mkdir tmp
+    #     # cd tmp
+    #     # you-get https://www.youtube.com/watch?v=Xk0Jc1rXf78
+    #     # cd ..
     
         
-    # - name: commit
-    #   run: |
-    #       git config --global user.email 3196@qq.com
-    #       git config --global user.name ndt
-    #       git add .
-    #       git commit -m "update" -a
+    - name: commit
+      run: |
+          git config --global user.email 3196@qq.com
+          git config --global user.name ndt
+          git add .
+          git commit -m "update" -a
                
-    # - name: Push changes
-    #   uses: ad-m/github-push-action@master
-    #   with:
-    #       github_token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
     
    # - name: Release
     #  uses: softprops/action-gh-release@v1
