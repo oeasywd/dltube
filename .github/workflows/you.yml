@@ -16,7 +16,7 @@ jobs:
         pip install you-get
         mkdir tmp
         cd tmp
-        you-get https://www.youtube.com/watch?v=Xk0Jc1rXf78
+        you-get -i https://www.youtube.com/watch?v=Xk0Jc1rXf78
         cd ..
     
         
