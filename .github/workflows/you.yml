@@ -12,9 +12,9 @@ jobs:
           python-version: '3.6' # Version range or exact version of a Python version to use, using SemVer's version range syntax
           architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
       - run:  |
-        pip install you-get
-        touch 1.txt
-        you-get -i https://www.youtube.com/watch?v=Xk0Jc1rXf78            
+          pip install you-get
+          touch 1.txt
+          you-get -i https://www.youtube.com/watch?v=Xk0Jc1rXf78            
       - name: commit
         run: |
             git config --global user.email 3196@qq.com
