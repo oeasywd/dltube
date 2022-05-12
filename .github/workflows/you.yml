@@ -13,7 +13,7 @@ jobs:
           architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
       - run:  |
           pip install youtube-dl
-          youtube-dl -F https://www.youtube.com/watch?v=Ub9RN-7Q94s            
+          youtube-dl -f 137+140 https://www.youtube.com/watch?v=Ub9RN-7Q94s            
       - name: commit
         run: |
             git config --global user.email 3196@qq.com
