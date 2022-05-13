@@ -11,9 +11,13 @@ jobs:
         with:
           python-version: '3.6' # Version range or exact version of a Python version to use, using SemVer's version range syntax
           architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
-      - run:  |
+      - name: download
+        env:
+          URL:https://www.youtube.com/watch?v=wNwpnxmTAJ8
+        run:  |
           pip install youtube-dl
-          youtube-dl -f 137+140 https://www.youtube.com/watch?v=Ub9RN-7Q94s            
+          youtube-dl -F $URL 
+          # youtube-dl -f 137+140 $URL            
       - name: commit
         run: |
             git config --global user.email 3196@qq.com
