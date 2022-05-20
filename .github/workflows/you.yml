@@ -13,7 +13,7 @@ jobs:
           architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
       - name: download
         env:
-          URL: https://www.youtube.com/watch?v=wNwpnxmTAJ8
+          URL: https://www.youtube.com/watch?v=GED3MbFogXg
         run:  |
           pip install youtube-dl
           # youtube-dl -F $URL 
