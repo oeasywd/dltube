@@ -3,7 +3,7 @@ name: CI
 on:
   push:
     paths:
-      - 'you.yml'
+      - '.github/workflows/you.yml'
  
 jobs:
   job_id_1: 
