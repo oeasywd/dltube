@@ -12,7 +12,8 @@ jobs:
         # env:
         #   URL: https://www.youtube.com/watch?v=GED3MbFogXg
         run:  |
-          git clone https://github.com/KingRan/KR.git
+          pwd
+          git clone https://github.com/KingRan/KR.git .
           ls -la         
       # - name: commit
       #   run: |
