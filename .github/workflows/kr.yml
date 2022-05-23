@@ -9,11 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: download
-        env:
-          URL: https://www.youtube.com/watch?v=GED3MbFogXg
+        # env:
+        #   URL: https://www.youtube.com/watch?v=GED3MbFogXg
         run:  |
           git clone https://github.com/KingRan/KR.git
-          ls         
+          ls -la         
       # - name: commit
       #   run: |
       #       git config --global user.email 3196@qq.com
